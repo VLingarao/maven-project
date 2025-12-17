@@ -16,28 +16,28 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building application'
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests'
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
         stage('Package') {
             steps {
                 echo 'Packaging artifact'
-                sh 'mvn package'
+                bat 'mvn package'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying application (dummy)'
-                sh 'echo Deployment completed'
+                bat 'echo Deployment completed'
             }
         }
     }
